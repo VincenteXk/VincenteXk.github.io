@@ -1,13 +1,17 @@
+import { useState } from 'react'
 import { Layers } from 'lucide-react'
 import HeroCard from './components/HeroCard'
 import GitHubCard from './components/GitHubCard'
 import ProjectCard from './components/ProjectCard'
+import ProjectModal from './components/ProjectModal'
 import WritingsSection from './components/WritingsSection'
 import AboutCard from './components/AboutCard'
 import FooterCard from './components/FooterCard'
 import { portfolioData } from './data/portfolioData'
 
 export default function App() {
+    const [activeProject, setActiveProject] = useState(null)
+
     return (
         <>
             {/* Background layers */}
@@ -41,7 +45,12 @@ export default function App() {
 
                 {/* Project Cards */}
                 {portfolioData.projects.map((project, i) => (
-                    <ProjectCard key={project.id} project={project} index={i} />
+                    <ProjectCard
+                        key={project.id}
+                        project={project}
+                        index={i}
+                        onOpenDetail={setActiveProject}
+                    />
                 ))}
 
                 {/* Writings */}
@@ -53,6 +62,14 @@ export default function App() {
                 {/* Footer */}
                 <FooterCard />
             </main>
+
+            {/* Project Detail Modal */}
+            {activeProject && (
+                <ProjectModal
+                    project={activeProject}
+                    onClose={() => setActiveProject(null)}
+                />
+            )}
         </>
     )
 }

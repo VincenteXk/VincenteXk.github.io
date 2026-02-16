@@ -58,7 +58,14 @@ export const portfolioData = {
                 '关键亮点三：在复杂的环境下进行了怎样的决策。',
             ],
             tags: ['AI', 'React', 'Product'],
-            link: '#',
+            detail: {
+                sections: [
+                    { heading: '// 背景与动机', content: '描述项目的起源。你发现了什么问题？为什么决定要做这个项目？' },
+                    { heading: '// 核心方案', content: '你设计了怎样的方案来解决这个问题？用了哪些技术或方法论？' },
+                    { heading: '// 关键决策', content: '在项目过程中你做了哪些关键决策？为什么这么选择？' },
+                    { heading: '// 成果与反思', content: '最终的结果如何？你学到了什么？如果重来你会做什么不同的事？' },
+                ],
+            },
         },
         {
             id: 'project-2',
@@ -71,7 +78,14 @@ export const portfolioData = {
                 '项目成果：上线后获得了初步的用户反馈和数据验证。',
             ],
             tags: ['UX', 'Design', 'LLM'],
-            link: '#',
+            detail: {
+                sections: [
+                    { heading: '// 背景与动机', content: '描述你如何发现这个垂直领域的需求痛点。' },
+                    { heading: '// 核心方案', content: '你设计的交互范式是什么？为什么选择双模态？' },
+                    { heading: '// 关键决策', content: '在权衡用户体验和技术可行性时，你做了哪些取舍？' },
+                    { heading: '// 成果与反思', content: '用户反馈如何？数据验证说明了什么？' },
+                ],
+            },
         },
         {
             id: 'project-3',
@@ -84,7 +98,14 @@ export const portfolioData = {
                 '跨团队协作：协调研发与测试资源，确保按时交付。',
             ],
             tags: ['Automation', 'Workflow', 'API'],
-            link: '#',
+            detail: {
+                sections: [
+                    { heading: '// 背景与动机', content: '描述你在调研阶段发现的自动化需求。' },
+                    { heading: '// 核心方案', content: '描述你选择的技术方案和系统架构。' },
+                    { heading: '// 关键决策', content: '在跨团队协作中，你如何协调不同角色的优先级？' },
+                    { heading: '// 成果与反思', content: '项目最终的效率提升数据和团队反馈。' },
+                ],
+            },
         },
     ],
 

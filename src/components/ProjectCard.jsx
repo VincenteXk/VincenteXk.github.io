@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project, index, onOpenDetail }) {
     return (
         <motion.article
             initial={{ opacity: 0, y: 20 }}
@@ -82,14 +82,13 @@ export default function ProjectCard({ project, index }) {
                     ))}
                 </div>
 
-                <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
+                    onClick={() => onOpenDetail(project)}
                     className="neon-link"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer' }}
                 >
                     阅读完整复盘 <ArrowUpRight size={13} />
-                </a>
+                </button>
             </div>
         </motion.article>
     )
