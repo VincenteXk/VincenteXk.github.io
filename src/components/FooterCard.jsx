@@ -11,17 +11,10 @@ export default function FooterCard() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6 }}
-            className="glass-card p-6 md:p-8"
+            className="glass-card"
         >
-            {/* Contact links */}
-            <div
-                className="flex flex-wrap items-center justify-center gap-6 mb-6"
-            >
-                <a
-                    href={`mailto:${footer.email}`}
-                    className="neon-link"
-                    title="Email"
-                >
+            <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
+                <a href={`mailto:${footer.email}`} className="neon-link" title="Email">
                     <Mail size={15} /> Email
                 </a>
                 <a
@@ -44,34 +37,16 @@ export default function FooterCard() {
                 </a>
             </div>
 
-            {/* Divider */}
-            <div
-                style={{
-                    height: '1px',
-                    background: 'linear-gradient(90deg, transparent, rgba(0,240,255,0.15), transparent)',
-                    marginBottom: '1rem',
-                }}
-            />
+            <div className="divider-line-subtle mb-4" />
 
-            {/* Built with & source */}
-            <div
-                className="flex flex-wrap items-center justify-center gap-4"
-                style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.68rem',
-                    color: 'var(--text-body)',
-                    opacity: 0.4,
-                }}
-            >
-                <span>
-                    Built with {footer.builtWith}
-                </span>
+            <div className="typo-meta flex flex-wrap items-center justify-center gap-4">
+                <span>Built with {footer.builtWith}</span>
                 <span>·</span>
                 <a
                     href={footer.sourceCode}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'inherit', textDecoration: 'none' }}
+                    className="flex items-center gap-1 text-inherit no-underline"
                 >
                     <Code2 size={11} /> Source
                 </a>

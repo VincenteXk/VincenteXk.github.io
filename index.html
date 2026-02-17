@@ -2,6 +2,14 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <style id="theme-critical">
+      :root{--bg-deep:#030712;--bg-card:rgba(15,23,42,.6);--text-body:#D4D4D8;--text-heading:#fff;--border-glass:rgba(0,240,255,.12);--nav-bg:rgba(3,7,18,.75);--nav-border:rgba(0,240,255,.08);--modal-backdrop:rgba(3,7,18,.85);--repo-bg:rgba(15,23,42,.5);--repo-border:rgba(0,240,255,.06);--grid-line:rgba(0,240,255,.03);--scanline:rgba(0,240,255,.015);--scrollbar-thumb:rgba(0,240,255,.25);}
+      [data-theme="light"]{--bg-deep:#f1f5f9;--bg-card:rgba(255,255,255,.85);--text-body:#334155;--text-heading:#0f172a;--border-glass:rgba(0,240,255,.25);--nav-bg:rgba(241,245,249,.85);--nav-border:rgba(0,240,255,.15);--modal-backdrop:rgba(15,23,42,.5);--repo-bg:rgba(255,255,255,.6);--repo-border:rgba(0,240,255,.12);--grid-line:rgba(0,240,255,.06);--scanline:rgba(0,240,255,.04);--scrollbar-thumb:rgba(0,240,255,.4);}
+      html{background:var(--bg-deep);}body{background:var(--bg-deep);}
+    </style>
+    <script>
+      (function(){var t=localStorage.getItem('portfolio-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="AI Product Manager Intern — 哲学 × 商业 × AI 的复合背景个人作品集" />

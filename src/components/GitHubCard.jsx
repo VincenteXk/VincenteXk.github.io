@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, GitBranch, Star, Activity } from 'lucide-react'
+import { GitBranch, Star } from 'lucide-react'
 import { portfolioData } from '../data/portfolioData'
 
 const { github } = portfolioData
@@ -29,129 +29,49 @@ export default function GitHubCard() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6 }}
-            className="glass-card p-6 md:p-10"
+            className="glass-card"
         >
-            {/* Header */}
-            <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                    <Activity size={16} style={{ color: 'var(--neon-cyan)' }} />
-                    <span className="section-label">Recent Activity</span>
-                </div>
-                <a
-                    href={github.profileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="neon-link"
-                >
-                    @{github.username} <ExternalLink size={12} />
-                </a>
-            </div>
-
-            {/* Activity summary */}
-            <p
-                style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.8rem',
-                    color: 'var(--text-body)',
-                    opacity: 0.7,
-                    marginBottom: '1.5rem',
-                }}
-            >
+            <p className="typo-mono-sm mb-6">
                 {'// '}{github.activitySummary}
             </p>
 
-            {/* Repo list */}
             <motion.ul
                 variants={container}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}
+                className="list-none flex flex-col gap-3"
             >
                 {github.repos.map((repo) => (
                     <motion.li
                         key={repo.name}
                         variants={item}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            padding: '12px 16px',
-                            borderRadius: '10px',
-                            background: 'rgba(15, 23, 42, 0.5)',
-                            border: '1px solid rgba(0, 240, 255, 0.06)',
-                            flexWrap: 'wrap',
-                            gap: '8px',
-                        }}
+                        className="repo-item flex items-center justify-between flex-wrap gap-2"
                     >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0 }}>
-                            <GitBranch size={14} style={{ color: 'var(--neon-cyan)', flexShrink: 0 }} />
-                            <span
-                                style={{
-                                    fontFamily: 'var(--font-mono)',
-                                    fontSize: '0.85rem',
-                                    color: 'var(--text-heading)',
-                                    fontWeight: 500,
-                                }}
-                            >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                            <GitBranch size={14} className="icon-accent flex-shrink-0" />
+                            <span className="typo-mono text-[0.85rem] font-medium text-[var(--text-heading)]">
                                 {repo.name}
                             </span>
-                            <span
-                                style={{
-                                    fontSize: '0.75rem',
-                                    color: 'var(--text-body)',
-                                    opacity: 0.6,
-                                    display: 'none',
-                                }}
-                                className="sm:!inline"
-                            >
+                            <span className="typo-mono-sm text-xs opacity-60 hidden sm:!inline">
                                 {repo.description}
                             </span>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
-                            <span
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '4px',
-                                    fontFamily: 'var(--font-mono)',
-                                    fontSize: '0.7rem',
-                                }}
-                            >
+                        <div className="flex items-center gap-3 flex-shrink-0">
+                            <span className="flex items-center gap-1 typo-mono text-[0.7rem]">
                                 <span
-                                    style={{
-                                        width: '8px',
-                                        height: '8px',
-                                        borderRadius: '50%',
-                                        background: languageColors[repo.language] || '#888',
-                                    }}
+                                    className="w-2 h-2 rounded-full"
+                                    style={{ background: languageColors[repo.language] || '#888' }}
                                 />
                                 {repo.language}
                             </span>
                             {repo.stars > 0 && (
-                                <span
-                                    style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '3px',
-                                        fontFamily: 'var(--font-mono)',
-                                        fontSize: '0.7rem',
-                                        color: 'var(--text-body)',
-                                        opacity: 0.7,
-                                    }}
-                                >
+                                <span className="flex items-center gap-0.5 typo-mono text-[0.7rem] text-[var(--text-body)] opacity-70">
                                     <Star size={10} /> {repo.stars}
                                 </span>
                             )}
-                            <span
-                                style={{
-                                    fontFamily: 'var(--font-mono)',
-                                    fontSize: '0.65rem',
-                                    color: 'var(--text-body)',
-                                    opacity: 0.4,
-                                }}
-                            >
+                            <span className="typo-mono text-[0.65rem] text-[var(--text-body)] opacity-40">
                                 {repo.updatedAt}
                             </span>
                         </div>

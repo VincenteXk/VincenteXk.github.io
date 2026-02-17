@@ -121,28 +121,8 @@ export const portfolioData = {
         },
     ],
 
-    /* ── About ── */
+    /* ── About (resume link used in Hero) ── */
     about: {
-        story: [
-            {
-                phase: '教育背景 / 哲学',
-                icon: '🎓',
-                description:
-                    '描述你的第一阶段背景。例如：分析哲学的训练中掌握了逻辑推理与批判性思维。',
-            },
-            {
-                phase: '专业进修 / 商业',
-                icon: '📊',
-                description:
-                    '描述第二阶段如何从数据驱动角度进行商业价值判断。',
-            },
-            {
-                phase: '当前状态 / AI',
-                icon: '🤖',
-                description:
-                    '定位为能从 0 到 1 构建 AI 产品的复合型人才，融合跨学科能力。',
-            },
-        ],
         resumeUrl: '#',
     },
 
