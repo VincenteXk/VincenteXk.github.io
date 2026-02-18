@@ -14,12 +14,12 @@ export default function Navbar() {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className="nav-bar"
         >
-            <div className="w-full px-8 flex items-center justify-between">
-                <span className="typo-mono text-sm font-semibold text-[var(--text-heading)] tracking-wide whitespace-nowrap">
+            <div className="nav-bar-inner w-full px-8 flex items-center justify-between">
+                <span className="nav-brand typo-mono font-semibold text-[var(--text-heading)] tracking-wide whitespace-nowrap">
                     {portfolioData.hero.name}
                 </span>
 
-                <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6">
+                <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-[1.8rem]">
                     {SECTION_NAV.map(({ id, label }) => (
                         <a key={id} href={`#${id}`} className="nav-link">
                             {label}
@@ -34,7 +34,7 @@ export default function Navbar() {
                     title={theme === 'dark' ? '切换到浅色' : '切换到深色'}
                     aria-label={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}
                 >
-                    {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                    {theme === 'dark' ? <Sun size={25} /> : <Moon size={25} />}
                 </button>
             </div>
         </motion.nav>

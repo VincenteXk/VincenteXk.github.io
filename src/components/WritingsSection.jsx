@@ -18,7 +18,7 @@ export default function WritingsSection() {
                         <h3 className="typo-heading text-[1.32rem] mb-2">
                             {writing.title}
                         </h3>
-                        <p className="typo-body-sm text-[0.88rem] mb-4">
+                        <p className="typo-body-sm mb-4">
                             {writing.summary}
                         </p>
                         <div className="flex items-center justify-between flex-wrap gap-3">

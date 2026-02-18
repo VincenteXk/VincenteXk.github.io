@@ -24,7 +24,7 @@ export default function ProjectModal({ project, onClose }) {
                 exit={{ opacity: 0, scale: 0.92, y: 20 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
                 onClick={(e) => e.stopPropagation()}
-                className="glass-card w-full max-w-[640px] max-h-[80vh] overflow-y-auto relative border border-[rgba(0,240,255,0.2)] shadow-[0_0_60px_rgba(0,240,255,0.08)]"
+                className="glass-card modal-card w-full max-w-[640px] max-h-[80vh] overflow-y-auto relative"
             >
                 <button type="button" onClick={onClose} className="modal-close-btn" aria-label="关闭">
                     <X size={18} />
@@ -33,7 +33,7 @@ export default function ProjectModal({ project, onClose }) {
                 <h2 className="typo-heading text-[1.5rem] mb-1 pr-8">
                     {project.title}
                 </h2>
-                <p className="typo-body text-sm mb-0.5">
+                <p className="typo-body mb-0.5">
                     {project.oneLiner}
                 </p>
                 <p className="typo-role mb-5">
