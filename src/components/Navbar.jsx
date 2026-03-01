@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Sun, Moon } from 'lucide-react'
 import { portfolioData } from '../data/portfolioData'
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from '../hooks/useTheme.jsx'
 import { SECTION_NAV } from '../constants/sections'
 
 export default function Navbar() {

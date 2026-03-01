@@ -16,7 +16,7 @@ export default function HeroCard() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-[0.95rem] leading-relaxed text-[var(--text-body)] opacity-[0.85]"
+                className="text-[0.95rem] leading-relaxed text-[var(--text-body)] opacity-[0.85] hero-description"
             >
                 {hero.description}
             </motion.p>

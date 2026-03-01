@@ -11,7 +11,16 @@ export const portfolioData = {
         tagline: '哲学思维 × 商业洞察 × AI驱动',
         subtitle: 'AI Product Manager Intern',
         description:
-            '这里是一段关于你的简介。建议保留复合背景的描述，例如：从第一性原理出发，用AI重构产品体验。哲学训练逻辑，商业验证价值，技术实现可能。',
+            `主页内容更新中...
+
+            心理洞察助手web版demo地址：https://modelscope.cn/studios/HeyKiddo/DeepSpeak
+
+            PersonalGUI项目仓库地址：https://github.com/vincentexk/Personal-GUI-Agent
+            
+            AI无人机项目仓库地址：https://github.com/vincentexk/JoySeeker-AI-Drone
+            
+            Coze投递助手项目地址：https://www.coze.cn/s/MANbkV8Au5M
+`,
     },
 
     /* ── GitHub ── */

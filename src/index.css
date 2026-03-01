@@ -132,6 +132,11 @@ body {
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.06), inset 0 0 30px rgba(0, 240, 255, 0.02);
 }
 
+/* Hero 描述文案：保留换行 */
+.hero-description {
+    white-space: pre-line;
+}
+
 /* ── Glass Card Liftable (projects etc) ── */
 .glass-card-lift {
     background: var(--bg-card);
